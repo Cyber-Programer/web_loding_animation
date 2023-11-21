@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(2, 2, 2, 0.935);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main{
+            border: 5px solid gainsboro;
+            height: 80px;
+            width: 80px;
+            border-right:5px solid aqua ;
+            border-radius: 50%;
+            animation: round 1s linear infinite;
+        }
+
+        @keyframes round{
+           
+
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .text {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            color: aqua;
+            margin-top: 20%;
+            font-size: 40px;
+        }
+
+        .text p {
+            animation: scaleText 1s ease-in-out infinite;
+            margin: 0 5px;
+        }
+
+
+        @keyframes scaleText {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Animation delay for each letter */
+        .text p:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text p:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .text p:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="text">
+        <p>L</p>
+        <p>o</p>
+        <p>a</p>
+        <p>d</p>
+        <p>i</p>
+        <p>n</p>
+        <p>g</p>
+    </div>
+</body>
+</html>
